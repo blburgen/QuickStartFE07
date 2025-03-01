@@ -1,7 +1,7 @@
 console.log("Section 1");
 let ages = [3,9,23,64,2,8,28,93]; //initial array given
 
-console.log("1. Programmatically subtract the value of the first element in the array from the value in the last element of the array. Do not use numbers to reference the last element, find it programmatically.");
+console.log("\n1. Programmatically subtract the value of the first element in the array from the value in the last element of the array. Do not use numbers to reference the last element, find it programmatically.");
 // function created to determine the difference between the first and last age.
 function differenceAge(ages){
     console.log(ages); //prints array to the console
@@ -10,11 +10,11 @@ function differenceAge(ages){
 }
 differenceAge(ages);//calls the function differenceAge
 
-console.log("2. Add a new age to your array and repeat the step above to ensure it is dynamic. (works for arrays of different lengths).");
+console.log("\n2. Add a new age to your array and repeat the step above to ensure it is dynamic. (works for arrays of different lengths).");
 ages.push(50);//adds 50 to the end of the array ages
 differenceAge(ages);//calls the function differenceAge again
 
-console.log("3. Use a loop to iterate through the array and calculate the average age.")
+console.log("\n3. Use a loop to iterate through the array and calculate the average age.")
 let averageAge = 0;// set averageAge to 0
 //A loop to add all the ages in ages to averageAge
 for(let i=0; i< ages.length; i++){
@@ -23,12 +23,12 @@ for(let i=0; i< ages.length; i++){
 averageAge = averageAge/ages.length; // divides the total ages by the number of ages to get the average
 console.log(averageAge);//prints averageAge to the console
 
-console.log("Section 2");
+console.log("\nSection 2");
 let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
 console.log ("Starting with an array called names:");
 console.log(names);
 
-console.log("1. Use a loop to iterate through the array and calculate the average number of letters per name.");
+console.log("\n1. Use a loop to iterate through the array and calculate the average number of letters per name.");
 let averageNameLength = 0;
 for(nameIn of names){
     averageNameLength += nameIn.length;
@@ -36,7 +36,7 @@ for(nameIn of names){
 averageNameLength = averageNameLength/names.length;
 console.log(averageNameLength);
 
-console.log("2. Use a loop to iterate through the array again and concatenate all the names together, separated by spaces.");
+console.log("\n2. Use a loop to iterate through the array again and concatenate all the names together, separated by spaces.");
 let nameString = "";
 for(let i=0; i< names.length; i++){
     nameString += names[i];
@@ -50,26 +50,65 @@ console.log("using join()")
 nameString = names.join(" ");
 console.log(nameString);
 
-console.log("3. How do you access the last element of any array?");
+console.log("\n3. How do you access the last element of any array?");
 console.log("");
 
-console.log("4. How do you access the first element of any array?");
+console.log("\n4. How do you access the first element of any array?");
 console.log("");
 
-console.log("5. Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.");
+console.log("\n5. Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.");
+let nameLengths = [];
+for(nameIn of names){
+    nameLengths.push(nameIn.length);
+}
+console.log(nameLengths);
 
-console.log("6. Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.");
+console.log("\n6. Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.");
+let sumTotal = 0;
+for(num of nameLengths){
+    sumTotal += num;
+}
+console.log(sumTotal);
 
-console.log("7. Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in 'Hello' and 3, I would expect the function to return 'HelloHelloHello').");
+console.log("\n7. Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in 'Hello' and 3, I would expect the function to return 'HelloHelloHello').");
+function wordNumberTimes(word, n){
+    let returnedWord = "";
+    for(let i = 1; i <= n; i++){
+        returnedWord += word;
+    }
+    return returnedWord;
+}
+console.log(wordNumberTimes('Hello', 3));
 
-console.log("8. Write a function that takes two parameters, firstName and lastName, and returns a full name. The full name should be the first and the last name separated by a space.");
+console.log("\n8. Write a function that takes two parameters, firstName and lastName, and returns a full name. The full name should be the first and the last name separated by a space.");
+function fullName(firstName, lastName){
+    return firstName + " " + lastName;
+}
+console.log(fullName("Brady", "Burgener"));
 
-console.log("9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.");
+console.log("\n9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.");
+function sumOfNumbersGreaterThan100(array){
+    let sumTotal = 0;
+    for(num of array){
+        sumTotal += num;
+    }
+    if(sumTotal > 100 ){
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(nameLengths);
+console.log(sumOfNumbersGreaterThan100(nameLengths));
+let largeNumArray = [20,60,3,4,8,2,6,8];
+console.log(largeNumArray);
+console.log(sumOfNumbersGreaterThan100(largeNumArray));
 
-console.log("10. Write a function that takes an array of numbers and returns the average of all the elements in the array.");
+console.log("\n10. Write a function that takes an array of numbers and returns the average of all the elements in the array.");
 
-console.log("11. Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.");
 
-console.log("12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.");
+console.log("\n11. Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.");
 
-console.log("13. Create a function of your own that solves a problem. In comments, write what the function does and why you created it.");
+console.log("\n12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.");
+
+console.log("\n13. Create a function of your own that solves a problem. In comments, write what the function does and why you created it.");
