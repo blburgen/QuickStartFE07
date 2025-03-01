@@ -58,3 +58,18 @@ console.log("");
 
 console.log("5. Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.");
 
+console.log("6. Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.");
+
+console.log("7. Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in 'Hello' and 3, I would expect the function to return 'HelloHelloHello').");
+
+console.log("8. Write a function that takes two parameters, firstName and lastName, and returns a full name. The full name should be the first and the last name separated by a space.");
+
+console.log("9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.");
+
+console.log("10. Write a function that takes an array of numbers and returns the average of all the elements in the array.");
+
+console.log("11. Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.");
+
+console.log("12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.");
+
+console.log("13. Create a function of your own that solves a problem. In comments, write what the function does and why you created it.");
