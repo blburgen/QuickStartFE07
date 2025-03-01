@@ -23,3 +23,29 @@ for(let i=0; i< ages.length; i++){
 averageAge = averageAge/ages.length; // divides the total ages by the number of ages to get the average
 console.log(averageAge);//prints averageAge to the console
 
+console.log("Section 2");
+let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
+console.log ("Starting with an array called names:");
+console.log(names);
+
+console.log("1. Using a loop calculate the average letters per name:");
+let averageNameLength = 0;
+for(nameIn of names){
+    averageNameLength += nameIn.length;
+}
+averageNameLength = averageNameLength/names.length;
+console.log(averageNameLength);
+
+console.log("2. Using a loop concatenate all the names together:");
+let nameString = "";
+for(let i=0; i< names.length; i++){
+    nameString += names[i];
+    if(i < names.length-1){
+        nameString += " ";
+    }
+}
+console.log(nameString);
+//or using join do the same thing
+console.log("using join()")
+nameString = names.join(" ");
+console.log(nameString);
